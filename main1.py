@@ -12,7 +12,7 @@ def main():
 
 if __name__ == "__main__":
     main()
-        for i in range(max(len(self.BuyOrders), len(self.SellOrders))):
+    for i in range(max(len(self.BuyOrders), len(self.SellOrders))):
             if self.BuyOrders != [] and self.SellOrders != []:
                 BidAskSpread = self.BuyOrders[0].Price - self.SellOrders[0].Price
                 while BidAskSpread > 0:
