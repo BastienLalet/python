@@ -1,11 +1,12 @@
-from book import Book
-def main():
-    book = Book("TEST")
-    book.insert_buy(10, 10.0)
-    book.insert_sell(120, 12.0)
-    book.insert_buy(5, 10.0)
-    book.insert_buy(2, 11.0)
-    book.insert_sell(1, 10.0)
-    book.insert_sell(10, 10.0)
-if __name__ == "__main__":
-    main()
+class Order:
+    def init (self,quantity,price,buy=True):
+        self.quantity=quantity
+        self.price=price
+        self.buy=buy
+
+    def is_sell(self):
+        return not self.buy
+
+o= Order(5,11,0)
+print(o.quantity)
+print(o.is_sell())
